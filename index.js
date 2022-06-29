@@ -61,7 +61,7 @@ const filterDivBy4 = (arr) =>
 const addAllUp = (arr) =>
   arr.reduce((accumulator, numbers) => {
     return accumulator + numbers;
-  });
+  },0);
 /**
  * Use .reduce to return the total sum of all numbers
  */
@@ -69,7 +69,7 @@ const addAllUp = (arr) =>
 const multiplyAllNums = (arr) =>
   arr.reduce((accumulator, numbers) => {
     return accumulator * numbers;
-  });
+  },1);
   /**
    * Use .reduce to return the total product of all numbers
    */
@@ -78,8 +78,8 @@ const multiplyAllNums = (arr) =>
 // BONUS
 const sumSquareAllNums = (arr) => 
   arr.reduce((accumulator, numbers) => {
-  return accumulator + (numbers*numbers);
-});
+  return accumulator + (numbers * numbers);
+},0);
   /**
    * Use .reduce to return the total sum of each number to the second power
    * @param {[Number]} arr will contain numbers from 1-15
@@ -88,7 +88,7 @@ const sumSquareAllNums = (arr) =>
 
 const addAllAges = (arr) =>   
   arr.reduce((accumulator, numbers) => {
-  return accumulator + numbers, 0
+  return accumulator + numbers
 });
   /**
    * Use .reduce to return the total sum of all ages in the provided arr
