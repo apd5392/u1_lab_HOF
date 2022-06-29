@@ -5,58 +5,91 @@
  * The bonus questions will tell you what to expect as an argument.
  */
 
-const getSquares = (arr) => {
-  /**
-   * Use .map to return an array of all nums multiplied by 2
-   */
-}
+const getSquares = (arr) =>
+  arr.map((numbers) => {
+    return numbers * 2;
+  });
+/**
+ * Use .map to return an array of all nums multiplied by 2
+ */
 
-const isDivBy3 = (arr) => {
-  /**
-   * Use .map to return an array of booleans, if the number is divisible by 3 return true otherwise false
-   * * The modulus % operator may be useful *
-   */
-}
+const isDivBy3 = (arr) =>
+  arr.map((numbers) => {
+    if (numbers % 3 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+/**
+ * Use .map to return an array of booleans, if the number is divisible by 3 return true otherwise false
+ * * The modulus % operator may be useful *
+ */
 
-const filterOdds = (arr) => {
-  /**
-   * Use .filter to return an array of all odd numbers
-   * * The modulus % operator may be useful *
-   */
-}
+const filterOdds = (arr) =>
+  arr.filter((numbers) => {
+    if (numbers % 2 === 1) {
+      return numbers;
+    }
+  });
+/**
+ * Use .filter to return an array of all odd numbers
+ * * The modulus % operator may be useful *
+ */
 
-const filterEvens = (arr) => {
-  /**
-   * Use .filter to return all even numbers
-   * * The modulus % operator may be useful *
-   */
-}
-const filterDivBy4 = (arr) => {
-  /**
-   * Use .filter to return all numbers that are divisible by 4
-   * * The modulus % operator may be useful *
-   */
-}
-const addAllUp = (arr) => {
-  /**
-   * Use .reduce to return the total sum of all numbers
-   */
-}
-const multiplyAllNums = (arr) => {
+const filterEvens = (arr) =>
+  arr.filter((numbers) => {
+    if (numbers % 2 === 0) {
+      return numbers;
+    }
+  });
+/**
+ * Use .filter to return all even numbers
+ * * The modulus % operator may be useful *
+ */
+const filterDivBy4 = (arr) =>
+  arr.filter((numbers) => {
+    if (numbers % 4 === 0) {
+      return numbers;
+    }
+  });
+/**
+ * Use .filter to return all numbers that are divisible by 4
+ * * The modulus % operator may be useful *
+ */
+
+const addAllUp = (arr) =>
+  arr.reduce((accumulator, numbers) => {
+    return accumulator + numbers;
+  });
+/**
+ * Use .reduce to return the total sum of all numbers
+ */
+
+const multiplyAllNums = (arr) =>
+  arr.reduce((accumulator, numbers) => {
+    return accumulator * numbers;
+  });
   /**
    * Use .reduce to return the total product of all numbers
    */
-}
+
 
 // BONUS
-const sumSquareAllNums = (arr) => {
+const sumSquareAllNums = (arr) => 
+  arr.reduce((accumulator, numbers) => {
+  return accumulator + (numbers*numbers);
+});
   /**
    * Use .reduce to return the total sum of each number to the second power
    * @param {[Number]} arr will contain numbers from 1-15
    * Your final result should be 1240
    */
-}
-const addAllAges = (arr) => {
+
+const addAllAges = (arr) =>   
+  arr.reduce((accumulator, numbers) => {
+  return accumulator + numbers, 0
+});
   /**
    * Use .reduce to return the total sum of all ages in the provided arr
    * The arr parameter contains:
@@ -66,7 +99,6 @@ const addAllAges = (arr) => {
     ]
     Your final result should be 55
    */
-}
 // BONUS
 
 module.exports = {
@@ -78,5 +110,5 @@ module.exports = {
   addAllUp,
   multiplyAllNums,
   sumSquareAllNums,
-  addAllAges
-}
+  addAllAges,
+};
